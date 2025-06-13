@@ -1,4 +1,4 @@
-# SST-agent-setup
+# sst-agent-setup
 
 **SST setup for max AI development productivity!**
 
