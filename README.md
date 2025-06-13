@@ -11,7 +11,7 @@ This project demonstrates a setup that helps agents to work with SST dev mode:
 - Rules to help the agent discover logs, app status, endpoints etc.
 - The excellent [Browser MCP](https://browsermcp.io/) for agent browser use.
 
-> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and avoids the creation of multiple app instances,
+> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and avoids the creation of multiple app instances.
 
 The project is a simple React Router app. You can easily apply the setup to any SST application. 
 
