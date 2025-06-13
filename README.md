@@ -11,7 +11,7 @@ This project demonstrates a setup that helps agents to work with SST dev mode:
 - Rules to help the agent discover logs, app status, endpoints etc.
 - The excellent [Browser MCP](https://browsermcp.io/) for agent browser use.
 
-> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and prevents multiple confusing instances.
+> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and avoids the creation of multiple app instances,
 
 The project is a simple React Router app. You can easily apply the setup to any SST application. 
 
@@ -54,4 +54,4 @@ If you have an existing SST app, apply the setup as follows:
 
 ## Why not use an MCP server?
 
-I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However I found that a rules-based approach is simpler and more effective, and easier to adapt to a user's specific requirements. No doubt SST will provide a better agent interface soon, or AI will get better at computer use and just look at the terminal, or we'll all get paperclipped 📎
+I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However I found that a rules-based approach is simpler and more effective, and easier to adapt to a user's specific requirements. 
