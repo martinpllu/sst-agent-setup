@@ -4,7 +4,7 @@
 
 SST's dev mode runs a full-stack cloud app in a local dev environment, with hot reloading of app and infra changes and powerful log viewers providing a fast feedback loop.
 
-We're all now using AI coding assistants to write code and fix issues in long agentic loops. However current models can get stuck trying to work with SST dev mode, trying to start duplicate servers, struggling to discover app endpoints, trying to randomly start servers etc.
+We're all now using AI coding assistants to write code and fix issues in long agentic loops. However current models can get stuck trying to work with SST dev mode, trying to start duplicate servers, struggling to discover app endpoints, not seeing logs etc.
 
 This project demonstrates a setup that helps agents to work with SST dev mode:
 
