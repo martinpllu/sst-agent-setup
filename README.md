@@ -2,12 +2,16 @@
 
 **SST setup for max AI development productivity!**
 
-Pairing [SST](https://sst.dev/) with AI coding agents is an incredibly powerful way to build full-stack cloud apps. However agents often get stuck trying to figure out how to work with the app running locally in `sst dev`.
+SST's dev mode runs a full-stack cloud app in a local dev environment, with hot reloading of app and infra changes and powerful log viewers providing a fast feedback loop.
 
-This project demonstrates a setup that helps agents work with the local app:
+We're all now using AI coding assistants to write code and fix issues in long agentic loops. However current models can get stuck trying to work with SST dev mode, trying to start duplicate servers, struggling to discover app endpoints, trying to randomly start servers etc.
 
-- Make all app logs visible to the agent, and tell it how to discover app status, endpoints etc.
-- Allow the agent to interact with the app in a browser using the excellent [Browser MCP](https://browsermcp.io/)
+This project demonstrates a setup that helps agents to work with SST dev mode:
+
+- Rules to help the agent discover logs, app status, endpoints etc.
+- The excellent [Browser MCP](https://browsermcp.io/) for agent browser use.
+
+> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and prevents multiple confusing instances.
 
 The project is a simple React Router app. You can easily apply the setup to any SST application. 
 
@@ -50,4 +54,4 @@ If you have an existing SST app, apply the setup as follows:
 
 ## Why not use an MCP server?
 
-I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However I found that a rules-based approach is simpler and more effective, and easier to adapt to a user's specific requirements. 
+I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However I found that a rules-based approach is simpler and more effective, and easier to adapt to a user's specific requirements. No doubt SST will provide a better agent interface soon, or AI will get better at computer use and just look at the terminal, or we'll all get paperclipped 📎
