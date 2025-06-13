@@ -51,6 +51,7 @@ If you have an existing SST app, apply the setup as follows:
 ## Notes
 
 - Tested mainly with Claude Sonnet 4 which has good knowledge of SST v3.
+- See https://github.com/sst/sst/issues/5885
 
 ## Why not use an MCP server?
 
