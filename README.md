@@ -4,7 +4,7 @@
 
 Pairing [SST](https://sst.dev/) with AI coding agents is an incredibly powerful way to build full-stack cloud apps. However agents often get stuck trying to figure out how to work with the app running locally in `sst dev`.
 
-This project demonstrates a setup that helps the agent work with the local app:
+This project demonstrates a setup that helps agents work with the local app:
 
 - Make all app logs visible to the agent, and tell it how to discover app status, endpoints etc.
 - Allow the agent to interact with the app in a browser using the excellent [Browser MCP](https://browsermcp.io/)
@@ -17,7 +17,7 @@ The project is a simple React Router app. You can easily apply the setup to any 
 
 - **This setup is for SST v3 only**, though it should be pretty easy to adapt to v2 if required.
 - Some familiarity with SST is assumed. 
-- Instructions are for MacOS or Linux only
+- Instructions are for MacOS or Linux only.
 
 ### Install Browser MCP
 
@@ -37,8 +37,10 @@ Assuming you have Cursor and a basic dev environment configured to point to your
 
 ### Applying the setup to your app
 
-- If you're using a web app like React, React Router, Svelte or NextJS, modify the `dev` command in `package.json`, adding `> .sst/log/web.log 2>&1` to the end of the command. This sends the output of the local web app to the logs directory (this is necessary as SST doesn't currently capture web app output in a file)
-- Copy `env.sh` to your workspace and add any required setup (e.g. AWS account config)
+If you have an existing SST app, apply the setup as follows:
+
+- If you're using a web app like React, React Router, Svelte or NextJS, modify the `dev` command in `package.json`, adding `> .sst/log/web.log 2>&1` to the end of the command. (This sends the output of the local web app to the logs directory. This is necessary as SST doesn't currently capture web app output in a file).
+- Copy `env.sh` to your workspace and add any required setup (e.g. AWS account config).
 - Copy the rules from `.cursor/rules/sst-local-dev.mdc` to the same path in your workspace.
 - If you're using something other than Cursor put the rules wherever they get picked up (e.g. `CLAUDE.md` for Claude Code).
 
