@@ -1,14 +1,15 @@
 # SST-agent-setup
 
-**[SST](https://sst.dev/) setup for AI agents**
+**SST setup for max AI development productivity!**
 
-This project demonstrates a setup that helps the agent work with a full-stack SST app running locally in dev mode. 
+Pairing [SST](https://sst.dev/) with AI coding agents is an incredibly powerful way to build full-stack cloud apps. However agents often get stuck trying to figure out how to work with the app running locally in `sst dev`.
 
-- Makes all application/SST logs visible to the agent
-- Defines rules on how to work with the app
-- Enables browser control via the excellent [Browser MCP](https://browsermcp.io/) 
+This project demonstrates a setup that helps the agent work with the local app:
 
-The demo uses a simple React Router app. You can easily apply the setup to any SST app. 
+- Make all app logs visible to the agent, and tell it how to discover app status, endpoints etc.
+- Allow the agent to interact with the app in a browser using the excellent [Browser MCP](https://browsermcp.io/)
+
+The project is a simple React Router app. You can easily apply the setup to any SST application. 
 
 ## Getting started
 
@@ -47,4 +48,4 @@ Assuming you have Cursor and a basic dev environment configured to point to your
 
 ## Why not use an MCP server?
 
-I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However overall I found that simple rules work better, and will be easier to adapt to a user's specific requirements.
+I built a working MCP server to achieve the equivalent of the above, and tried various approaches including using the websockets/streaming APIs to connect to a running server, and spawning `npx sst dev --mode=mono` as a child process to capture stdio. However I found that a rules-based approach is simpler and more effective, and easier to adapt to a user's specific requirements. 
