@@ -16,4 +16,5 @@ alwaysApply: true
    - `.sst/log/web.log` - web app logs (e.g. nextjs or React Router app). You can get the URL of the web app in this log.
 - `.sst/outputs.json` contains infrastructure outputs, e.g. backend endpoints.
 - As the application is running in sst dev mode, all changes to backend/frontend code and infrastructure (in sst.config.ts) will be automatically reloaded. Code reloading takes a few seconds. Infrastructure changes can take longer so you might want to watch the logs.
-- Always run `[ -f ./env.sh ] && source ./env.sh` before any AWS CLI commands
+- Always run `[ -f ./env.sh ] && source ./env.sh` before any AWS CLI commands. 
+- Only run read-only AWS CLI commands unless explicitly instructed by the user.
