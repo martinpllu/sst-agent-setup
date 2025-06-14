@@ -2,16 +2,16 @@
 
 **SST setup for max AI development productivity!**
 
-SST's dev mode runs a full-stack cloud app in a local dev environment, with hot reloading of app and infra changes and powerful log viewers providing a fast feedback loop.
+SST's dev mode runs your full-stack cloud app locally. It gives you a fast feedback loop with hot reloading of app/infra changes and a terminal-based log viewer.
 
-We're all now using AI coding assistants to write code and fix issues in long agentic loops. However current models can get stuck trying to work with SST dev mode, trying to start duplicate servers, struggling to discover app endpoints, not seeing logs etc.
+We're all now using AI coding assistants to write code and fix issues in long agentic loops. However models can get stuck trying to work with SST dev mode: trying to start duplicate servers, struggling to discover app endpoints, not seeing logs etc.
 
 This project demonstrates a setup that helps agents to work with SST dev mode:
 
 - Rules to help the agent discover logs, app status, endpoints etc.
 - The excellent [Browser MCP](https://browsermcp.io/) for agent browser use.
 
-> A key principle is that you as the human developer runs `npx sst dev` in your terminal. The AI agent then interacts with the app. This helps you see for yourself what's going on as the AI develops, and avoids the creation of multiple app instances.
+> A key principle is that you as the human developer runs `npx sst dev` in a terminal. The AI agent then interacts with this. This helps you see for yourself what's going on as the AI develops, and avoids the creation of multiple app instances.
 
 The project is a simple React Router app. You can easily apply the setup to any SST application. 
 
@@ -52,6 +52,7 @@ If you have an existing SST app, apply the setup as follows:
 
 - Tested mainly with Claude Sonnet 4 which has good knowledge of SST v3.
 - See https://github.com/sst/sst/issues/5885
+- In env.sh you may want to configure an AWS user with [ReadOnlyAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html) and/or add 'aws' to the command Deny List (Cursor Settings -> Chat) so that aws commands aren't run without user approval.
 
 ## Why not use an MCP server?
 
