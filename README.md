@@ -43,7 +43,7 @@ Assuming you have Cursor and a basic dev environment configured to point to your
 
 If you have an existing SST app, apply the setup as follows:
 
-- If you're using a web app like React, React Router, Svelte or NextJS, modify the `dev` command in `package.json`, adding `> .sst/log/web.log 2>&1` to the end of the command. (This sends the output of the local web app to the logs directory. This is necessary as SST doesn't currently capture web app output in a file).
+- If you're using a web app like React, React Router, Svelte or NextJS, modify the `dev` command in `package.json`, adding `> .sst/log/web.log 2>&1` to the end of the command. (This sends the output of the local web app to the logs directory. Necessary as SST doesn't currently capture web app output in a file - this should be resolved by https://github.com/sst/sst/pull/5898).
 - Copy `env.sh` to your workspace and add any required setup (e.g. AWS account config).
 - Copy the rules from `.cursor/rules/sst-local-dev.mdc` to the same path in your workspace.
 - If you're using something other than Cursor put the rules wherever they get picked up (e.g. `CLAUDE.md` for Claude Code).
